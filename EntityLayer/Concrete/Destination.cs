@@ -12,9 +12,6 @@ namespace EntityLayer.Concretes
     {
         [Key]
         public int DestinationID { get; set; }
-
-        [Required]
-        [Column]
         public string City { get; set; }
         public string DayNight { get; set; }
         public double Price { get; set; }
