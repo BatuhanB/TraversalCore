@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer.Concretes
+namespace EntityLayer.Concrete
 {
     public class Destination
     {

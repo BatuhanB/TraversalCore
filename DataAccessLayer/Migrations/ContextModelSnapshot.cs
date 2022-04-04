@@ -18,7 +18,7 @@ namespace DataAccessLayer.Migrations
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EntityLayer.Concretes.About", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.About", b =>
                 {
                     b.Property<int>("AboutID")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Abouts");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.About2", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.About2", b =>
                 {
                     b.Property<int>("About2ID")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("About2s");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Contact", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Contact", b =>
                 {
                     b.Property<int>("ContactID")
                         .ValueGeneratedOnAdd()
@@ -102,7 +102,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Destination", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Destination", b =>
                 {
                     b.Property<int>("DestinationID")
                         .ValueGeneratedOnAdd()
@@ -135,7 +135,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Destinations");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Feature", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Feature", b =>
                 {
                     b.Property<int>("Feature1ID")
                         .ValueGeneratedOnAdd()
@@ -159,7 +159,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Features");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Feature2", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Feature2", b =>
                 {
                     b.Property<int>("Feature2ID")
                         .ValueGeneratedOnAdd()
@@ -183,7 +183,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Feature2s");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Guide", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Guide", b =>
                 {
                     b.Property<int>("GuideID")
                         .ValueGeneratedOnAdd()
@@ -213,7 +213,7 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Guides");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.NewsLatter", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.NewsLetter", b =>
                 {
                     b.Property<int>("NewsletterID")
                         .ValueGeneratedOnAdd()
@@ -225,10 +225,28 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("NewsletterID");
 
-                    b.ToTable("NewsLatters");
+                    b.ToTable("NewsLetters");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concretes.Testimonial", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.SubAbout", b =>
+                {
+                    b.Property<int>("SubAboutID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SubAboutID");
+
+                    b.ToTable("SubAbouts");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Testimonial", b =>
                 {
                     b.Property<int>("TestimonialID")
                         .ValueGeneratedOnAdd()
